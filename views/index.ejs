@@ -1,0 +1,20 @@
+<%-include('header')%>
+
+<div class="itemContainer">
+  <% for(let i=0;i<items.length;i++){ %>
+    
+    <div class="card">
+      <div class="top"><img src="<%=items[i].url %>" alt=""></div>
+      <div class="bottom">
+        <div class="top">
+          <div class="left"> $<%=items[i].price %></div>
+          <div class="right"><%= randomNum[i]%>/5</div>
+        </div>
+        <div class="bottom"> <form action="/" method="post" ><button name="buyButton" value="<%= items[i]._id %>">Buy Now</button></form></div>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+
+<%-include('footer')%>

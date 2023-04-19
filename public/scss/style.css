@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=DynaPuff:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Pixels&family=Tilt+Prism&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
+}
+
+html {
+  width: 100vw;
+}
+
+:root {
+  --primary-clr:hsl(0, 22%, 23%);
+  --clr-white:hsl(0, 0%, 100%);
+  --clr-black:hsl(0, 0%, 0%);
+}
+
+body {
+  padding: 0;
+  height: auto;
+  width: 100vw;
+}
+body .slogan {
+  height: 300px;
+  width: inherit;
+  background-color: var(--primary-clr);
+  background-image: url(/images/image1.png);
+  background-size: cover;
+}
+body .slogan .navbar {
+  position: fixed;
+  top: 0;
+  width: inherit;
+  height: 50px;
+  background-color: var(--clr-black);
+  background: linear-gradient(var(--primary-clr) 75%, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+body .slogan .navbar .left {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .slogan .navbar .left h1 {
+  font-family: "Rubik Pixels", cursive;
+  z-index: 10;
+  font-weight: 900;
+  color: hsl(351, 97%, 57%);
+  translate: 50px;
+}
+body .slogan .navbar .right {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+body .slogan .navbar .right * {
+  display: flex;
+  align-items: center;
+}
+body .slogan .navbar .right ul {
+  margin-right: 2vw;
+  height: inherit;
+  width: inherit;
+}
+body .slogan .navbar .right ul li {
+  list-style: none;
+  padding: 0 2vw;
+  font-family: "DynaPuff", cursive;
+  height: inherit;
+}
+body .slogan .navbar .right ul li a {
+  height: inherit;
+  width: inherit;
+  color: var(--clr-white);
+  text-decoration: none;
+}
+body .slogan .navbar .right ul li:hover {
+  background-color: hsla(0, 18%, 31%, 0.6);
+  background: linear-gradient(hsl(351, 97%, 57%), transparent);
+  border-bottom: 3px hsl(351, 97%, 57%) solid;
+}
+body .slogan .navbar .hamburger {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3vw;
+  display: none;
+  cursor: pointer;
+}
+body .slogan .navbar .hamburger div {
+  outline: 1px black solid;
+  height: 5px;
+  border-radius: 5px;
+  width: 40px;
+  margin: 2px;
+  background-color: rgb(178, 129, 136);
+  opacity: 1;
+}
+body p {
+  font-size: 65px;
+  position: absolute;
+  right: 25%;
+  top: 60px;
+  rotate: -15deg;
+  z-index: 9;
+  color: rgb(178, 129, 136);
+  font-family: "Dancing Script", cursive;
+}
+
+.itemContainer {
+  margin-top: 50px;
+  padding: 10px;
+  height: auto;
+  width: 100vw;
+  background-color: rgb(253, 248, 248);
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.itemContainer ::-webkit-scrollbar-thumb {
+  display: none;
+}
+.itemContainer .card {
+  margin: 0 10px;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: black 0 0 3px 0.3px;
+}
+.itemContainer .card .top {
+  height: 65%;
+  width: inherit;
+  border-radius: inherit;
+}
+.itemContainer .card .top img {
+  height: 100%;
+  width: inherit;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.itemContainer .card .bottom {
+  width: inherit;
+  height: 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: brown;
+  font-family: "DynaPuff", cursive;
+}
+.itemContainer .card .bottom .top {
+  padding: 25px;
+  height: 50%;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemContainer .card .bottom .bottom {
+  width: inherit;
+  height: 50%;
+  display: grid;
+  place-items: center;
+}
+.itemContainer .card .bottom .bottom form {
+  width: 100%;
+}
+.itemContainer .card .bottom .bottom form button {
+  background-color: hsl(120, 65%, 61%);
+  outline: none;
+  border: none;
+  width: 80%;
+  border-radius: 5px;
+  height: 20px;
+  font-family: "DynaPuff", cursive;
+  margin-left: 10%;
+}
+.itemContainer .card .bottom .bottom form button:hover {
+  cursor: pointer;
+  background-color: hsl(120, 65%, 41%);
+}
+
+form div {
+  height: 100%;
+  width: 80%;
+  margin: 50px 10%;
+  background-color: blueviolet;
+}
+form div input {
+  padding: 0 2rem;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: red;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px black solid;
+}
+form div input::-moz-placeholder {
+  color: red;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "DynaPuff", cursive;
+}
+form div input::placeholder {
+  color: red;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "DynaPuff", cursive;
+}
+form button {
+  background-color: hsl(120, 65%, 61%);
+  outline: none;
+  border: none;
+  width: 30%;
+  margin-left: 35%;
+  border-radius: 5px;
+  height: 30px;
+  font-family: "DynaPuff", cursive;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: hsl(120, 65%, 41%);
+}
+
+.cart {
+  position: absolute;
+  height: 520px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 9;
+}
+.cart table {
+  width: 100%;
+  color: red;
+  background-color: var(--clr-white);
+  box-shadow: 0 0 2px 0.3px black;
+  font-size: larger;
+  border-radius: 5px;
+}
+.cart table tr td {
+  width: 33%;
+  height: 50px;
+  text-align: center;
+}
+.cart .cartButton {
+  margin-top: 20px;
+  width: 100%;
+  margin-left: 0;
+}
+
+@keyframes translateDown {
+  from {
+    translate: 0;
+    opacity: 0.5;
+  }
+  to {
+    translate: 0 100px;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .slogan .navbar .right {
+    display: none;
+  }
+  body .slogan .navbar .show {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    animation: translateDown 1s forwards;
+  }
+  body .slogan .navbar .show ul {
+    background-color: var(--clr-white);
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  body .slogan .navbar .show ul li {
+    width: 25vw;
+    min-width: 120px;
+  }
+  body .slogan .navbar .show ul li a {
+    color: red;
+    font-size: 12px;
+  }
+  body .slogan p {
+    font-size: 50px;
+    right: 10%;
+  }
+  #hamburger {
+    display: flex;
+  }
+  .cart {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

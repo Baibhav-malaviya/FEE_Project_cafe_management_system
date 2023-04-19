@@ -1,0 +1,20 @@
+<%-include('header') %>
+<div class="cart">
+<table>
+    <% for(let i=0; i<items.length; i++) { %>
+     <%   if(items[i].count>0){%>
+        <% let total = items[i].price * items[i].count %>
+        <tr>
+            <td ><%= items[i].count %></td>
+            <td><%= items[i].price %></td>
+            <td><%= total %></td>
+        </tr> 
+     <%}%>
+    <%}%> 
+</table>
+
+<form action="/cart" method="post" ><button class="cartButton" type="submit" value="delete">Order</button></form>
+</div>
+
+
+<%-include('footer') %>
